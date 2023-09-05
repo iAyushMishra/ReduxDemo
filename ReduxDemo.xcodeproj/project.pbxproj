@@ -11,6 +11,11 @@
 		85F1A5592A7FF52C00E4EAFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5582A7FF52C00E4EAFB /* ContentView.swift */; };
 		85F1A55B2A7FF52D00E4EAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F1A55A2A7FF52D00E4EAFB /* Assets.xcassets */; };
 		85F1A55E2A7FF52D00E4EAFB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F1A55D2A7FF52D00E4EAFB /* Preview Assets.xcassets */; };
+		85F1A56A2AA7184D00E4EAFB /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5692AA7184D00E4EAFB /* Reducer.swift */; };
+		85F1A56C2AA7187F00E4EAFB /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A56B2AA7187F00E4EAFB /* Store.swift */; };
+		85F1A56F2AA718AB00E4EAFB /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A56E2AA718AB00E4EAFB /* State.swift */; };
+		85F1A5722AA718D600E4EAFB /* ActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5712AA718D600E4EAFB /* ActionProtocol.swift */; };
+		85F1A5772AA7190800E4EAFB /* ActionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5762AA7190800E4EAFB /* ActionImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		85F1A5582A7FF52C00E4EAFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85F1A55A2A7FF52D00E4EAFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85F1A55D2A7FF52D00E4EAFB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		85F1A5692AA7184D00E4EAFB /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		85F1A56B2AA7187F00E4EAFB /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		85F1A56E2AA718AB00E4EAFB /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		85F1A5712AA718D600E4EAFB /* ActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionProtocol.swift; sourceTree = "<group>"; };
+		85F1A5762AA7190800E4EAFB /* ActionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,7 @@
 		85F1A5552A7FF52B00E4EAFB /* ReduxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				85F1A5652A7FF55B00E4EAFB /* Store */,
 				85F1A5562A7FF52B00E4EAFB /* ReduxDemoApp.swift */,
 				85F1A5582A7FF52C00E4EAFB /* ContentView.swift */,
 				85F1A55A2A7FF52D00E4EAFB /* Assets.xcassets */,
@@ -65,6 +76,50 @@
 				85F1A55D2A7FF52D00E4EAFB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85F1A5652A7FF55B00E4EAFB /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				85F1A5682AA7177600E4EAFB /* Reducer */,
+				85F1A56D2AA7189D00E4EAFB /* Store */,
+				85F1A5702AA718AF00E4EAFB /* State */,
+				85F1A5732AA718D900E4EAFB /* Action */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		85F1A5682AA7177600E4EAFB /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				85F1A5692AA7184D00E4EAFB /* Reducer.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
+		85F1A56D2AA7189D00E4EAFB /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				85F1A56B2AA7187F00E4EAFB /* Store.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		85F1A5702AA718AF00E4EAFB /* State */ = {
+			isa = PBXGroup;
+			children = (
+				85F1A56E2AA718AB00E4EAFB /* State.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		85F1A5732AA718D900E4EAFB /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				85F1A5712AA718D600E4EAFB /* ActionProtocol.swift */,
+				85F1A5762AA7190800E4EAFB /* ActionImpl.swift */,
+			);
+			path = Action;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +193,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F1A5592A7FF52C00E4EAFB /* ContentView.swift in Sources */,
+				85F1A5722AA718D600E4EAFB /* ActionProtocol.swift in Sources */,
 				85F1A5572A7FF52B00E4EAFB /* ReduxDemoApp.swift in Sources */,
+				85F1A5772AA7190800E4EAFB /* ActionImpl.swift in Sources */,
+				85F1A56A2AA7184D00E4EAFB /* Reducer.swift in Sources */,
+				85F1A56F2AA718AB00E4EAFB /* State.swift in Sources */,
+				85F1A56C2AA7187F00E4EAFB /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +340,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.apple.ayush.ReduxDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayush.ReduxDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -309,7 +369,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.apple.ayush.ReduxDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayush.ReduxDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
