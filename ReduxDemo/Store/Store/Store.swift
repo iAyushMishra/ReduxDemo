@@ -8,18 +8,18 @@
 import Foundation
 
 /// Create a store to hold your state and manage actions
-class Store: ObservableObject {
-    var reducer: Reducer
-    @Published var state: State
+class Store<StoreState: ReduxState>: ObservableObject {
+    var reducer: Reducer<StoreState>
+    @Published var state: StoreState
     
     /**
      Initializes the `Store` class.
      - Parameters:
         - reducer: A closure of type `Reducer` that represents the reducer function.
                 The `@escaping` keyword indicates that  it can be stored and used later.
-        - state: The optional parameter that allows to initalize store with initial state. If not provided it defaults to empty state
+        - state: The  parameter that allows to initalize store with `StoreState` state.
      */
-    init(reducer: @escaping Reducer, state: State = State()) {
+    init(reducer: @escaping Reducer<StoreState>, state: StoreState) {
         self.reducer = reducer
         self.state = state
     }

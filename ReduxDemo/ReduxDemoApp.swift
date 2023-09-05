@@ -22,7 +22,7 @@ struct ReduxDemoApp: App {
          * You inject the store into the environment of the root view (ContentView).
          * Any child view within ContentView or its descendants can access and observe the store because it's in the environment.
          */
-        let store = Store(reducer: reducer)
+        let store = Store(reducer: appReducer, state: AppState())
         WindowGroup {
             ContentView().environmentObject(store)
         }

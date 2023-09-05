@@ -7,18 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85D206AB2AA7A40D00392816 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D206AA2AA7A40D00392816 /* AddTaskView.swift */; };
 		85F1A5572A7FF52B00E4EAFB /* ReduxDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5562A7FF52B00E4EAFB /* ReduxDemoApp.swift */; };
 		85F1A5592A7FF52C00E4EAFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5582A7FF52C00E4EAFB /* ContentView.swift */; };
 		85F1A55B2A7FF52D00E4EAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F1A55A2A7FF52D00E4EAFB /* Assets.xcassets */; };
 		85F1A55E2A7FF52D00E4EAFB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F1A55D2A7FF52D00E4EAFB /* Preview Assets.xcassets */; };
 		85F1A56A2AA7184D00E4EAFB /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5692AA7184D00E4EAFB /* Reducer.swift */; };
 		85F1A56C2AA7187F00E4EAFB /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A56B2AA7187F00E4EAFB /* Store.swift */; };
-		85F1A56F2AA718AB00E4EAFB /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A56E2AA718AB00E4EAFB /* State.swift */; };
+		85F1A56F2AA718AB00E4EAFB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A56E2AA718AB00E4EAFB /* AppState.swift */; };
 		85F1A5722AA718D600E4EAFB /* ActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5712AA718D600E4EAFB /* ActionProtocol.swift */; };
 		85F1A5772AA7190800E4EAFB /* ActionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5762AA7190800E4EAFB /* ActionImpl.swift */; };
+		85F1A5792AA72A0A00E4EAFB /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5782AA72A0A00E4EAFB /* CounterReducer.swift */; };
+		85F1A57B2AA72AB300E4EAFB /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A57A2AA72AB300E4EAFB /* AppReducer.swift */; };
+		85F1A57D2AA72B1600E4EAFB /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A57C2AA72B1600E4EAFB /* CounterState.swift */; };
+		85F1A57F2AA72B4800E4EAFB /* ReduxStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A57E2AA72B4800E4EAFB /* ReduxStateProtocol.swift */; };
+		85F1A5812AA72F6C00E4EAFB /* TaskState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5802AA72F6C00E4EAFB /* TaskState.swift */; };
+		85F1A5842AA72F9400E4EAFB /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5832AA72F9400E4EAFB /* Task.swift */; };
+		85F1A5862AA7301E00E4EAFB /* TaskReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5852AA7301E00E4EAFB /* TaskReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		85D206AA2AA7A40D00392816 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		85F1A5532A7FF52B00E4EAFB /* ReduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F1A5562A7FF52B00E4EAFB /* ReduxDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxDemoApp.swift; sourceTree = "<group>"; };
 		85F1A5582A7FF52C00E4EAFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,9 +35,16 @@
 		85F1A55D2A7FF52D00E4EAFB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85F1A5692AA7184D00E4EAFB /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		85F1A56B2AA7187F00E4EAFB /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		85F1A56E2AA718AB00E4EAFB /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		85F1A56E2AA718AB00E4EAFB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		85F1A5712AA718D600E4EAFB /* ActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionProtocol.swift; sourceTree = "<group>"; };
 		85F1A5762AA7190800E4EAFB /* ActionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionImpl.swift; sourceTree = "<group>"; };
+		85F1A5782AA72A0A00E4EAFB /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
+		85F1A57A2AA72AB300E4EAFB /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		85F1A57C2AA72B1600E4EAFB /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
+		85F1A57E2AA72B4800E4EAFB /* ReduxStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxStateProtocol.swift; sourceTree = "<group>"; };
+		85F1A5802AA72F6C00E4EAFB /* TaskState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskState.swift; sourceTree = "<group>"; };
+		85F1A5832AA72F9400E4EAFB /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		85F1A5852AA7301E00E4EAFB /* TaskReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +77,11 @@
 		85F1A5552A7FF52B00E4EAFB /* ReduxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				85F1A5822AA72F8600E4EAFB /* Models */,
 				85F1A5652A7FF55B00E4EAFB /* Store */,
 				85F1A5562A7FF52B00E4EAFB /* ReduxDemoApp.swift */,
 				85F1A5582A7FF52C00E4EAFB /* ContentView.swift */,
+				85D206AA2AA7A40D00392816 /* AddTaskView.swift */,
 				85F1A55A2A7FF52D00E4EAFB /* Assets.xcassets */,
 				85F1A55C2A7FF52D00E4EAFB /* Preview Content */,
 			);
@@ -93,6 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				85F1A5692AA7184D00E4EAFB /* Reducer.swift */,
+				85F1A5782AA72A0A00E4EAFB /* CounterReducer.swift */,
+				85F1A57A2AA72AB300E4EAFB /* AppReducer.swift */,
+				85F1A5852AA7301E00E4EAFB /* TaskReducer.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -108,7 +129,10 @@
 		85F1A5702AA718AF00E4EAFB /* State */ = {
 			isa = PBXGroup;
 			children = (
-				85F1A56E2AA718AB00E4EAFB /* State.swift */,
+				85F1A56E2AA718AB00E4EAFB /* AppState.swift */,
+				85F1A57C2AA72B1600E4EAFB /* CounterState.swift */,
+				85F1A57E2AA72B4800E4EAFB /* ReduxStateProtocol.swift */,
+				85F1A5802AA72F6C00E4EAFB /* TaskState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -120,6 +144,14 @@
 				85F1A5762AA7190800E4EAFB /* ActionImpl.swift */,
 			);
 			path = Action;
+			sourceTree = "<group>";
+		};
+		85F1A5822AA72F8600E4EAFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85F1A5832AA72F9400E4EAFB /* Task.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,11 +225,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F1A5592A7FF52C00E4EAFB /* ContentView.swift in Sources */,
+				85F1A5792AA72A0A00E4EAFB /* CounterReducer.swift in Sources */,
+				85F1A57F2AA72B4800E4EAFB /* ReduxStateProtocol.swift in Sources */,
 				85F1A5722AA718D600E4EAFB /* ActionProtocol.swift in Sources */,
+				85F1A57B2AA72AB300E4EAFB /* AppReducer.swift in Sources */,
 				85F1A5572A7FF52B00E4EAFB /* ReduxDemoApp.swift in Sources */,
+				85D206AB2AA7A40D00392816 /* AddTaskView.swift in Sources */,
 				85F1A5772AA7190800E4EAFB /* ActionImpl.swift in Sources */,
+				85F1A57D2AA72B1600E4EAFB /* CounterState.swift in Sources */,
+				85F1A5842AA72F9400E4EAFB /* Task.swift in Sources */,
 				85F1A56A2AA7184D00E4EAFB /* Reducer.swift in Sources */,
-				85F1A56F2AA718AB00E4EAFB /* State.swift in Sources */,
+				85F1A56F2AA718AB00E4EAFB /* AppState.swift in Sources */,
+				85F1A5862AA7301E00E4EAFB /* TaskReducer.swift in Sources */,
+				85F1A5812AA72F6C00E4EAFB /* TaskState.swift in Sources */,
 				85F1A56C2AA7187F00E4EAFB /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

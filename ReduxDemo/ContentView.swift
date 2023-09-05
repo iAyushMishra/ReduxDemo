@@ -9,10 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     
+    /// This will allow to open a presentation sheet
+    @State private var isPresented: Bool = false
+    
     /// This property is used to inject the store into your SwiftUi view.
     /// This is done at a higher level in your SwiftUI App,
     /// so the store becomes available to all that need access to it.
-    @EnvironmentObject var store: Store
+    @EnvironmentObject var store: Store<AppState>
     
     
     /// Type to represent a subset of your app state.
@@ -31,7 +34,7 @@ struct ContentView: View {
      
      Responsible for taking in state and dispaching different actions.
      */
-    private func map(state: State) -> Props {
+    private func map(state: CounterState) -> Props {
         Props(counter: state.counter) {
             store.dispatch(action: IncrementAction())
         } onDecrement: {
@@ -42,9 +45,11 @@ struct ContentView: View {
 
     }
     var body: some View {
-        let props = map(state: store.state)
+        let props = map(state: store.state.counterState)
         
         VStack {
+            Spacer()
+            
             Text("\(props.counter)")
                 .padding()
             
@@ -60,6 +65,15 @@ struct ContentView: View {
                 props.onAdd(100)
             }
             
+            Spacer()
+            
+            Button("Add Task") {
+                isPresented = true
+            }
+            
+            Spacer()
+        }.sheet(isPresented: $isPresented) {
+            Text("Add task view")
         }
     }
 }
@@ -67,7 +81,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
-        let store = Store(reducer: reducer)
+        let store = Store(reducer: appReducer, state: AppState())
         ContentView().environmentObject(store)
     }
 }

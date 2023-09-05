@@ -9,6 +9,7 @@ import Foundation
 
 /// Define your application state.
 /// This holds all the data your app needs.
-struct State {
-    var counter: Int = 0
+struct AppState: ReduxState {
+    var counterState = CounterState()
+    var taskState = TaskState()
 }

@@ -20,3 +20,7 @@ struct DecrementAction: Action {
 struct AddAction: Action {
     let value: Int
 }
+
+struct AddTaskAction: Action {
+    let task: Task
+}
