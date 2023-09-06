@@ -7,8 +7,14 @@
 
 import Foundation
 
+typealias Middleware<StoreState: ReduxState> = (StoreState, Action,
+                                                @escaping Dispatcher)-> Void
+typealias Dispatcher = (Action) -> Void
+
 /// Create a store to hold your state and manage actions
 class Store<StoreState: ReduxState>: ObservableObject {
+    
+    var middleware: [Middleware<StoreState>]
     var reducer: Reducer<StoreState>
     @Published var state: StoreState
     
@@ -19,9 +25,10 @@ class Store<StoreState: ReduxState>: ObservableObject {
                 The `@escaping` keyword indicates that  it can be stored and used later.
         - state: The  parameter that allows to initalize store with `StoreState` state.
      */
-    init(reducer: @escaping Reducer<StoreState>, state: StoreState) {
+    init(reducer: @escaping Reducer<StoreState>, state: StoreState, middleware: [Middleware<StoreState>] = []) {
         self.reducer = reducer
         self.state = state
+        self.middleware = middleware
     }
     
     /**
@@ -30,6 +37,13 @@ class Store<StoreState: ReduxState>: ObservableObject {
      - Parameter action: Instance of `Action` which represents the action to be dispatched.
      */
     func dispatch(action: Action) {
-        state = reducer(state, action)
+        DispatchQueue.main.async {
+            self.state = self.reducer(self.state, action)
+        }
+        
+        // run all middleware
+        middleware.forEach { middleware in
+            middleware(state, action, dispatch)
+        }
     }
 }

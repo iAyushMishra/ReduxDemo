@@ -11,7 +11,8 @@ import Foundation
 /// Create reducers to specify how the state should change in response to actions.
 /// This method take the current state and an action and return a new state
 ///
-func counterReducer(_ state: CounterState,_ action: Action) -> CounterState {
+func counterReducer(_ state: CounterState,
+                    _ action: Action) -> CounterState {
     var state = state
     
     switch action {
@@ -25,5 +26,6 @@ func counterReducer(_ state: CounterState,_ action: Action) -> CounterState {
             break
     }
     
+    print(state)
     return state
 }

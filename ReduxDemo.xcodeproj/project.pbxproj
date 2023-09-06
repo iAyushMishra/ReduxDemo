@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		855CB1A32AA89DA4009BFB0A /* IncrementMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CB1A22AA89DA4009BFB0A /* IncrementMiddleware.swift */; };
 		85D206AB2AA7A40D00392816 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D206AA2AA7A40D00392816 /* AddTaskView.swift */; };
+		85D206AE2AA894EC00392816 /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D206AD2AA894EC00392816 /* LogMiddleware.swift */; };
 		85F1A5572A7FF52B00E4EAFB /* ReduxDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5562A7FF52B00E4EAFB /* ReduxDemoApp.swift */; };
 		85F1A5592A7FF52C00E4EAFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F1A5582A7FF52C00E4EAFB /* ContentView.swift */; };
 		85F1A55B2A7FF52D00E4EAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F1A55A2A7FF52D00E4EAFB /* Assets.xcassets */; };
@@ -27,7 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		855CB1A22AA89DA4009BFB0A /* IncrementMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementMiddleware.swift; sourceTree = "<group>"; };
 		85D206AA2AA7A40D00392816 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		85D206AD2AA894EC00392816 /* LogMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
 		85F1A5532A7FF52B00E4EAFB /* ReduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F1A5562A7FF52B00E4EAFB /* ReduxDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxDemoApp.swift; sourceTree = "<group>"; };
 		85F1A5582A7FF52C00E4EAFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85D206AC2AA894DD00392816 /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				85D206AD2AA894EC00392816 /* LogMiddleware.swift */,
+				855CB1A22AA89DA4009BFB0A /* IncrementMiddleware.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
 		85F1A54A2A7FF52B00E4EAFB = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 		85F1A5652A7FF55B00E4EAFB /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				85D206AC2AA894DD00392816 /* Middleware */,
 				85F1A5682AA7177600E4EAFB /* Reducer */,
 				85F1A56D2AA7189D00E4EAFB /* Store */,
 				85F1A5702AA718AF00E4EAFB /* State */,
@@ -238,6 +252,8 @@
 				85F1A56F2AA718AB00E4EAFB /* AppState.swift in Sources */,
 				85F1A5862AA7301E00E4EAFB /* TaskReducer.swift in Sources */,
 				85F1A5812AA72F6C00E4EAFB /* TaskState.swift in Sources */,
+				855CB1A32AA89DA4009BFB0A /* IncrementMiddleware.swift in Sources */,
+				85D206AE2AA894EC00392816 /* LogMiddleware.swift in Sources */,
 				85F1A56C2AA7187F00E4EAFB /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

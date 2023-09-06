@@ -7,7 +7,8 @@
 
 import Foundation
 
-func taskReducer(_ state: TaskState, _ action: Action) -> TaskState {
+func taskReducer(_ state: TaskState,
+                 _ action: Action) -> TaskState {
     var state = state
     
     switch action {

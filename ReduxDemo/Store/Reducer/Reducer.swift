@@ -15,7 +15,8 @@ import Foundation
  */
 
 // make Reducer generic to make Reducer of a particular state.
-typealias Reducer<State: ReduxState> = (_ state: State,_ action: Action) -> State
+typealias Reducer<State: ReduxState> = (_ state: State,
+                                        _ action: Action) -> State
 
 ///
 /// Create reducers to specify how the state should change in response to actions.

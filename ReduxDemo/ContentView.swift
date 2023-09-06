@@ -25,6 +25,7 @@ struct ContentView: View {
         let onIncrement: () -> Void
         let onDecrement: () -> Void
         let onAdd: (Int) -> Void
+        let onIncrementAsync: () -> Void
     }
     
     /*
@@ -41,6 +42,8 @@ struct ContentView: View {
             store.dispatch(action: DecrementAction())
         } onAdd: {
             store.dispatch(action: AddAction(value: $0))
+        } onIncrementAsync: {
+            store.dispatch(action: IncrementActionAsync())
         }
 
     }
@@ -65,6 +68,10 @@ struct ContentView: View {
                 props.onAdd(100)
             }
             
+            Button("Increment Async") {
+                props.onIncrementAsync()
+            }
+            
             Spacer()
             
             Button("Add Task") {
@@ -81,7 +88,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
-        let store = Store(reducer: appReducer, state: AppState())
+        let store = Store(reducer: appReducer,
+                          state: AppState())
         ContentView().environmentObject(store)
     }
 }
